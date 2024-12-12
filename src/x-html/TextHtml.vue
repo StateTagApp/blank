@@ -63,7 +63,7 @@ export default {
   computed: {
 
     tryContent: function () {
-      return (!_.isEmpty(this.serviceContent))
+      return (!_.isEmpty(this.serviceContent) || _.isNumber(this.serviceContent))
           ? this.serviceContent
           : this.fallback;
     }
